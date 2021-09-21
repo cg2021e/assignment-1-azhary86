@@ -1,6 +1,6 @@
 This is JAR ( With some money in there or act as my piggybank )
 
-![jar1](/images/jar1_fix.png)
-![jar2](/images/jar2_fix.png)
-![jar3](/images/jar3_fix.png)
-![jar4](/images/jar4_fix.png)
+![jar1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/jar1_fix.jpg)
+![jar2](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/jar2_fix.jpg)
+![jar3](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/jar3_fix.jpg)
+![jar4](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/jar4_fix.jpg)
