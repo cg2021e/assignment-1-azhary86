@@ -1,3 +1,5 @@
+Ryan Rasyid A - 05111840000079
+
 This is ERASER ( Whiteboard ERASER )
 
 *front view
