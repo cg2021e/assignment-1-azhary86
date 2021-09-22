@@ -1,4 +1,4 @@
-This is JAR ( With some money in there or act as my piggybank )
+This is ERASER ( Whiteboard ERASER )
 
 *front view
 ![eraser1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/eraser1_fix.jpg)
