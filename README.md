@@ -1,18 +1,25 @@
-#Assignment 1
+<h1>Assignment 1</h1>
 Ryan Rasyid A - 05111840000079
 
 This is ERASER ( Whiteboard ERASER )
 
 *right view
-![eraser1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser1_fix.jpg)
+
+![eraser1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser1_fix.jpg)
 
 *rear view
-![eraser2](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser2_fix.jpg)
+
+![eraser2](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser2_fix.jpg)
 
 *left view
-![eraser3](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser3_fix.jpg)
+
+![eraser3](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser3_fix.jpg)
 
 *front view
-![eraser4](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser4_fix.jpg)
 
-#Assignment 2
+![eraser4](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser4_fix.jpg)
+
+
+<h1>Assignment 2</h1>
+
+<a href="">Result</a> of my work ( choosen 2 of 4 images up there )
