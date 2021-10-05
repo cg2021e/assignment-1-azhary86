@@ -22,4 +22,4 @@ This is ERASER ( Whiteboard ERASER )
 
 <h1>Assignment 2</h1>
 
-<a href="">Result</a> of my work ( choosen 2 of 4 images up there )
+<a href="https://cg2021e.github.io/assignment-1-azhary86/">Result</a> of my work ( choosen 2 of 4 images up there )
