@@ -1,1 +1,18 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5695354&assignment_repo_type=AssignmentRepo)
+#Assignment 1
+Ryan Rasyid A - 05111840000079
+
+This is ERASER ( Whiteboard ERASER )
+
+*right view
+![eraser1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser1_fix.jpg)
+
+*rear view
+![eraser2](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser2_fix.jpg)
+
+*left view
+![eraser3](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser3_fix.jpg)
+
+*front view
+![eraser4](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/update_eraser4_fix.jpg)
+
+#Assignment 2
