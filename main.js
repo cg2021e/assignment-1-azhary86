@@ -1,26 +1,80 @@
 function main() {
-    //Access the canvas through DOM: Document Object Model
-    var canvas = document.getElementById('myCanvas');   // The paper
-    var gl = canvas.getContext('webgl');                // The brush and the paints
+    var canvas = document.getElementById('myCanvas');   
+    var gl = canvas.getContext('webgl');                
 
-    // Define vertices data
-    /**
-     * A ( -0.5, -0.5 )
-     * B (  0.5, -0.5 )
-     * C (  0.5,  0.5 )
-     * D ( -0.5,  0.5 )
-     */
+    var vertices1 = [ //left photo
+        //top
+        
+        //frontBlackTop
+        -0.78, 0.4, 0.0, 0.0, 0.0,
+        -0.22, 0.4, 0.0, 0.0, 0.0,
+        -0.78, 0.41, 0.0, 0.0, 0.0,
 
-    var vertices = [
-        -0.5, -0.5, 0.0, 1.0, 0.0,     // Point A
-         0.5, -0.5, 0.0, 0.0, 1.0,     // Point B
-         0.5,  0.5, 1.0, 0.0, 0.0,     // Point C
-         0.5,  0.5, 1.0, 0.0, 0.0,     // Point C
-        -0.5,  0.5, 1.0, 0.0, 0.0,     // Point D
-        -0.5, -0.5, 0.0, 1.0, 0.0      // Point A
+        //triangleTopRight
+        -0.78, 0.41, 0.0, 0.0, 0.0,
+        -0.22, 0.41, 0.0, 0.0, 0.0,
+        -0.22, 0.4, 0.0, 0.0, 0.0,
+
+        //bodyTop1
+        -0.78, 0.4, 0.5, 0.0, 0.0,
+        -0.22, 0.4, 0.5, 0.0, 0.0,
+        -0.78, 0.3, 0.5, 0.0, 0.0, 
+
+        //bodyTop2
+        -0.22, 0.4, 0.5, 0.0, 0.0,
+        -0.22, 0.3, 0.5, 0.0, 0.0,
+        -0.78, 0.3, 0.5, 0.0, 0.0,
+        
+        //Bot
+
+        //bodyBot1
+        -0.78, 0.35, 0.255, 0.0, 0.0,
+        -0.22, 0.35, 0.255, 0.0, 0.0,
+        -0.78, 0.2, 0.255, 0.0, 0.0,
+
+        //bodyBot2
+        -0.22, 0.35, 0.255, 0.0, 0.0,
+        -0.22, 0.2, 0.255, 0.0, 0.0,
+        -0.78, 0.2, 0.255, 0.0, 0.0
     ];
 
-    // Create a linked-list for storing the vertices data
+    var vertices2 = [ //right photo
+        //Top
+        
+        //triangleFrontBlackTop
+        0.78, 0.3, 0.1, 0.1, 0.1,
+        0.22, 0.3, 0.1, 0.1, 0.1,
+        0.78, 0.31, 0.1, 0.1, 0.1,
+
+        //triangleFrontBlackTop
+        0.78, 0.31, 0.1, 0.1, 0.1,
+        0.22, 0.31, 0.1, 0.1, 0.1,
+        0.22, 0.3, 0.1, 0.1, 0.1,
+
+        //bodyTop1
+        0.78, 0.41, 0.5, 0.0, 0.0,
+        0.22, 0.41, 0.5, 0.0, 0.0,
+        0.78, 0.31, 0.5, 0.0, 0.0, 
+
+        //bodyTop2
+        0.22, 0.41, 0.5, 0.0, 0.0,
+        0.22, 0.31, 0.5, 0.0, 0.0,
+        0.78, 0.31, 0.5, 0.0, 0.0,
+        
+        //Bot
+
+        //bodyBot1
+        0.78, 0.35, 0.0, 0.0, 0.0,
+        0.22, 0.35, 0.0, 0.0, 0.0,
+        0.78, 0.2, 0.0, 0.0, 0.0,
+
+        //bodyBot2
+        0.22, 0.35, 0.0, 0.0, 0.0,
+        0.22, 0.2, 0.0, 0.0, 0.0,
+        0.78, 0.2, 0.0, 0.0, 0.0
+    ]
+    var vertices = [...vertices1, ...vertices2];
+    
     var buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -29,10 +83,9 @@ function main() {
         attribute vec2 aPosition;
         attribute vec3 aColor;
         varying vec3 vColor;
-        uniform vec2 uChange;
+        uniform mat4 uTranslate;
         void main() {
-            gl_PointSize = 10.0;
-            gl_Position = vec4(aPosition + uChange, 0.0, 1.0);
+            gl_Position = uTranslate * vec4(aPosition, 0.0, 1.0);
             vColor = aColor;
         }
     `;
@@ -92,14 +145,14 @@ function main() {
     );
     gl.enableVertexAttribArray(aColor);
 
-    var freeze = false;
+    /*var freeze = false;
     // Apply some interaction using mouse
     function onMouseClick(event) {
         freeze = !freeze;
     }
     document.addEventListener("click", onMouseClick, false);
-
-    var speed = [3/600, 1/600];
+*/
+    /*var speed = [3/600, 1/600];
     // Create a uniform to animate the vertices
     var uChange = gl.getUniformLocation(shaderProgram, "uChange");
     var change = [0, 0];
@@ -115,5 +168,42 @@ function main() {
         }
         requestAnimationFrame(render);
     }
-    requestAnimationFrame(render);
+    requestAnimationFrame(render);*/
+    var speed = 0.0079;
+    var y = 0; // limit top and bot for animation
+    // Create a uniform to animate the vertices
+    const uTranslate = gl.getUniformLocation(shaderProgram, 'uTranslate');
+    
+    function render() {
+        //control the bouncing range
+        if (y <= -0.5 || y >= 0.5) speed = -speed;
+		y += speed;
+        
+        const vertices1Pos = [
+		1.0, 0.0, 0.0, 0.0,
+		0.0, 1.0, 0.0, 0.0,
+		0.0, 0.0, 1.0, 0.0,
+		0.0, 0.0, 0.0, 1.0,
+	    ]
+
+	    const vertices2Pos = [
+		1.0, 0.0, 0.0, 0.0,
+		0.0, 1.0, 0.0, 0.0,
+		0.0, 0.0, 1.0, 0.0,
+		0.0, y, 0.0, 1.0,
+	    ]
+		
+        //coloring canvas
+	    gl.clearColor(0.49, 0.49, 0.49, 1.0); 
+	    gl.clear(gl.COLOR_BUFFER_BIT);
+
+        gl.uniformMatrix4fv(uTranslate, false, vertices1Pos);
+        gl.drawArrays(gl.TRIANGLES, 0, vertices1.length/5);
+
+		gl.uniformMatrix4fv(uTranslate, false, vertices2Pos);
+        gl.drawArrays(gl.TRIANGLES, vertices1.length/5, vertices2.length/5);
+            
+        requestAnimationFrame(render);
+    }
+    render();
 }
