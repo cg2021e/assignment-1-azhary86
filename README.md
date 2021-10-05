@@ -3,7 +3,7 @@ Ryan Rasyid A - 05111840000079
 
 This is ERASER ( Whiteboard ERASER )
 
-*right view
+*front view
 
 ![eraser1](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser1_fix.jpg)
 
@@ -15,7 +15,7 @@ This is ERASER ( Whiteboard ERASER )
 
 ![eraser3](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser3_fix.jpg)
 
-*front view
+*right view
 
 ![eraser4](https://github.com/cg2021e/assignment-1-azhary86/blob/main/images/updated_eraser4_fix.jpg)
 
