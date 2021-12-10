@@ -176,8 +176,8 @@ function main() {
     
     function render() {
         //control the bouncing range
-        if (y <= -0.5 || y >= 0.5) speed = -speed;
-		y += speed;
+        //if (y <= -0.5 || y >= 0.5) speed = -speed;
+		//y += speed;
         
         const vertices1Pos = [
 		1.0, 0.0, 0.0, 0.0,
@@ -190,7 +190,7 @@ function main() {
 		1.0, 0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0,
 		0.0, 0.0, 1.0, 0.0,
-		0.0, y, 0.0, 1.0,
+		0.0, /*y*/0.0, 0.0, 1.0,
 	    ]
 		
         //coloring canvas
